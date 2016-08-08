@@ -1,5 +1,5 @@
 TAG := latest
-IMAGE := docker.paypertrail.com/paypertrail/webcaddy
+IMAGE := lucacri/laravelcaddy
 
 build:
 	@docker build -t ${IMAGE}:${TAG} .
