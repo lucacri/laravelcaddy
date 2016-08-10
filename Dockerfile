@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM phusion/baseimage:latest
 
 MAINTAINER "Luca Critelli" <lucacri@gmail.com>
 
@@ -13,7 +13,7 @@ LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
 apt-get upgrade -y
 
-RUN BUILD_PACKAGES="php7.0-fpm php7.0-zip php7.0-bz2 php7.0-mysql php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php7.0-mcrypt php7.0-sqlite3 php7.0-tidy php7.0-pgsql php7.0-xml nano php-mbstring" && \
+RUN BUILD_PACKAGES="python3 php7.0-fpm php7.0-zip php7.0-bz2 php7.0-mysql php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php7.0-mcrypt php7.0-sqlite3 php7.0-tidy php7.0-pgsql php7.0-xml nano php-mbstring" && \
 apt-get -y install $BUILD_PACKAGES && \
 apt-get remove --purge -y software-properties-common && \
 apt-get autoremove -y && \
